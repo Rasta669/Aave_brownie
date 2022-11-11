@@ -1,0 +1,61 @@
+dependencies:
+  - aave/protocol-v2@Deployment#001
+  - aave/aave-v3-core@1.16.2
+
+compiler:
+  solc:
+    remappings:
+      - '@aave=aave/protocol-v2@Deployment#001'
+      - '@aave-v3=Aave/aave-v3-core@1.16.2'
+
+networks:
+  mainnet:
+    weth_token: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
+    lending_pool_addresses_provider: '0xb53c1a33016b2dc2ff3653530bff1848a515c8c5'
+    dai_eth_price_feed: '0x773616E4d11A78F511299002da57A0a94577F1f4'
+    dai_contract: '0x6b175474e89094c44da98b954eedeac495271d0f'
+  mainnet-fork-dev:
+    weth_token: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
+    lending_pool_addresses_provider: '0xb53c1a33016b2dc2ff3653530bff1848a515c8c5'
+    lending_pool_addresses_provider_registry: ''
+    dai_eth_price_feed: '0x773616E4d11A78F511299002da57A0a94577F1f4'
+    dai_contract: '0x6b175474e89094c44da98b954eedeac495271d0f'
+  kovan:
+    weth_token: '0xa1C74a9A3e59ffe9bEe7b85Cd6E91C0751289EbD'
+    lending_pool_addresses_provider: '0x88757f2f99175387ab4c6a4b3067c77a695b0349'
+    dai_eth_price_feed: '0x22B58f1EbEDfCA50feF632bD73368b2FdA96D541'
+    dai_contract: '0xFf795577d9AC8bD7D90Ee22b6C1703490b6512FD'
+  polygon-main:
+    weth_token: '0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619'
+    wmatic_token: '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270'
+    pool: '0x794a61358D6845594F94dc1DB02A252b5b4814aD'
+    lending_pool_addresses_provider: '0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb'
+    lending_pool_addresses_provider_registry: '0x770ef9f4fe897e59daCc474EF11238303F9552b6'
+    usdt_contract: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F'
+    usdc_contract: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174'
+    aave_oracle: '0xb023e699F5a33916Ea823A16485e259257cA8Bd1'
+  polygon-main-fork:
+    weth_token: '0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619'
+    wmatic_token: '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270'
+    pool: '0x794a61358D6845594F94dc1DB02A252b5b4814aD'
+    lending_pool_addresses_provider: '0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb'
+    lending_pool_addresses_provider_registry: '0x770ef9f4fe897e59daCc474EF11238303F9552b6'
+    usdt_contract: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F'
+    usdc_contract: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174'
+    aave_oracle: '0xb023e699F5a33916Ea823A16485e259257cA8Bd1'
+  goerli:
+    weth_token: '0x2e3A2fb8473316A02b8A297B982498E661E1f6f5'
+    lending_pool_addresses_provider: '0xc4dCB5126a3AfEd129BC3668Ea19285A9f56D15D'
+    lending_pool_addresses_provider_registry: '0xC87385b5E62099f92d490750Fcd6C901a524BBcA'
+    dai_eth_price_feed: '0x2A5Acddb524B9454204Ed54EAB51Faf24250a397'
+    dai_contract: '0xDF1742fE5b0bFc12331D8EAec6b478DfDbD31464'
+    usdt_price_feed: '0x5838fD84a94B3Bc30EE4BDF10AD981Da3310a6a9'
+    usdc_contract: '0xA2025B15a1757311bfD68cb14eaeFCc237AF5b43'
+    usdc_stable: '0xF04958AeA8b7F24Db19772f84d7c2aC801D9Cf8b'
+    usdt_contract: '0xC2C527C0CACF457746Bd31B2a698Fe89de2b6d49'
+    aave_oracle: '0x5bed0810073cc9f0DacF73C648202249E87eF6cB'
+
+wallets:
+  from_key: ${PRIVATE_KEY}
+
+dotenv: .env
